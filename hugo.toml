@@ -1,9 +1,8 @@
-baseURL = 'https://weeks.ginatrapani.org/'
-languageCode = 'en-us'
-title = 'My Life in Weeks'
-disableKinds = ["taxonomy", "taxonomy"]
+baseURL = "/"
+languageCode = "en-us"
+title = "Strange — My Life in Weeks"
+disableKinds = ["taxonomy", "taxonomyTerm"]
 enableEmoji = true
 
-
 [params]
-author = "Gina Trapani"
+author = "Strange"
