@@ -1,8 +1,10 @@
 ---
+---
 title: "Strange — My Life in Weeks"
 description: "This is a map of my life, where each week I've been alive is a little box."
 start_date: 1997-10-01
-end_year: 2097
+end_year: 2075
+---
 
 ---
 
