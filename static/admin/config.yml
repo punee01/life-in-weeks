@@ -1,0 +1,40 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+local_backend: true
+
+collections:
+  - name: "home"
+    label: "Home Page"
+    files:
+      - label: "Index"
+        name: "index"
+        file: "content/index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text", required: false }
+          - { label: "Start Date (YYYY-MM-DD)", name: "start_date", widget: "datetime", time_format: false, format: "YYYY-MM-DD" }
+          - { label: "End Year", name: "end_year", widget: "number", min: 1900, max: 2200 }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
+
+  - name: "events"
+    label: "Life Events"
+    files:
+      - label: "Events"
+        name: "events"
+        file: "data/events.yml"
+        fields:
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            label_singular: "Event"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Start (YYYY-MM-DD)", name: "start", widget: "datetime", time_format: false, format: "YYYY-MM-DD" }
+              - { label: "End (YYYY-MM-DD)", name: "end", widget: "datetime", time_format: false, format: "YYYY-MM-DD" }
+              - { label: "Color key", name: "color", widget: "select", options: ["childhood","school","college","work","work2","work3"], default: "work" }
+              - { label: "Note", name: "note", widget: "string", required: false }
